@@ -5,57 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <title>Saptarshi's Portfolio</title>
+        <!--css link-->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Lato:wght@300&family=Poppins&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+
     </head>
 
     <body>
-        <header>
-            <ul>
-                <li>Home</li>
-                <li>About Me</li>
-                <li>Skills</li>
-                <li>My Experience</li>
-                <li>Projects</li>
-                <li>Contact Me</li>
+        <header >
+            <ul class="navbar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">My Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contacts">Contact Me</a></li>
             </ul>
         </header>
 
         <!--for the home-->
-        <section>
-            <video autoplay loop muted>
+        <section class="home" id="home">
+            <video autoplay loop muted class="back-video">
                 <source src="for_portfolio.mp4" type="video/mp4">
             </video>
 
-            <div>
-                <h2>For Home</h2>
+            <div class="home-text">
+                <h4>Hi!</h4>
+                <h1>I am Saptarshi Bose.</h1>
+                <h3>Your fellow developer and programming enthusiast.</h3>
             </div>
         </section>
 
         <!--for about-->
-        <section>
-            <div>
-                For About
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="">
             </div>
+
+            <div class="about-text">
+                <h2>About Me</h2>
+                <h4>Hi! My name is Saptarshi!</h4>
+                <p>I am a B.Tech final year student of Dr. Sudhir Chandra SUR Institute Of Technology & Sports Complex, 
+                    pursuing my degree in Computer Science Engineering. I am an avid learner of new concepts and technologies, 
+                with a keen interest towards problem solving.</p><br>
+                
+                <p>My area of interests include logic building using OOPs principle along with, along 
+                    with Web-Development with special interest towards backend development.</p>
+
+                <div class="about-list">
+                    <div>
+                        <h5>1. Problem Solving</h5>
+                    </div>
+                    <div>
+                        <h5>2. OOPs</h5>
+                    </div>
+                    <div>
+                        <h5>3. DSA</h5>
+                    </div>
+                    <div>
+                        <h5>4. Software Development</h5>
+                    </div>
+                </div>
+                <a href="#contacts" class="btn">Contact Me</a>
+            </div>
+
         </section>
 
-        <!--for skills-->
+        <!--for technologies-->
         <section>
-            <div>
-                For Skills
+            <div class="inner">
+            
+                <div class="skills" id="skills">
+                    <h1>Languages & Technologies</h1>                 
+                </div>
+            <div class="Tcontainer">
+                <div><h2>Java</h2></div>
+                <div><h2>Golang</h2></div>
+                <div><h2>Springboot</h2></div>
+                <div><h2>Gin</h2></div>
+                <div><h2>JavaScript</h2></div>
+                <div><h2>React.js</h2></div>
+                <div><h2>Node.js</h2></div>
+                <div><h2>PostgreSQL</h2></div>
+                <div><h2>MongoDB</h2></div>
+                <div><h2>Docker</h2></div>
+                <div><h2>Firebase</h2></div>
+            </div>
+                
             </div>
         </section>
-
+        
         <!--for experience-->
-        <section>
-            <div>
-                For Experience
+        <section class="experience" id="experience">
+            <h1>My Experiences</h1>
+        
+            <div class="experience-container">
+        
+                <div class="comp-det">
+                    <a href="https://www.projectx.cloud/">
+                        <img src="img/projectx_cloud_logo.jpg" alt="ProjectX" class="comp-img">
+                    </a>
+                    <h4 class="comp-name">ProjectX-Cloud</h4>
+                    <h4 class="comp-position">Software Engineering Intern</h4>
+                    <p class="comp-desc">
+                        Working in backend development, using GoLang and the Gin framework to optimize product features and experience.
+                    </p>
+                    <h4 class="comp-date">2024 - Present</h4>
+                </div>
+        
+                <div class="comp-det">
+                    <a href="https://euphoriagenx.com/">
+                        <img src="img/images.jpg" alt="EuphoriaGenX" class="comp-img">
+                    </a>
+                    <h4 class="comp-name">EuphoriaGenX</h4>
+                    <h4 class="comp-position">Web Development Intern</h4>
+                    <p class="comp-desc">
+                        Successfully developed a motor vehicle service management application for better user experience, using the Django framework.
+                    </p>
+                    <h4 class="comp-date">2023</h4>
+                </div>
+        
+                <div class="comp-det">
+                    <a href="https://www.academor.com/">
+                        <img src="img/academor_logo.jpg" alt="Academor" class="comp-img">
+                    </a>
+                    <h4 class="comp-name">Academor</h4>
+                    <h4 class="comp-position">Cyber Security Intern</h4>
+                    <p class="comp-desc">
+                        Worked on implementing effective safety principles with the security department. Performed pen-testing using Metasploit and conducted controlled security breaches using key loggers on multiple host devices.
+                    </p>
+                    <h4 class="comp-date">2022</h4>
+                </div>
+        
             </div>
-        </section>
+        </section>        
 
         <!--for projects-->
-        <section>
-            <div>
-                For Contacts
+        <section class="projects" id="projects">
+            <div class="proj-text">
+                <h2>My Projects</h2>
+            </div>
+        <div class="proj-container">
+            <div class="proj-item">
+                <video autoplay loop muted class="proj-video">
+                    <source src="vid/Indeed-vid.mp4" type="video/mp4">
+                </video>
+                <p>A simple web-app cloning the basic funtionalities of popular job search site, Indeed. Built 
+                    using React.js, Springboot and MongoDB.
+                </p>
+            </div>
+            <div class="proj-item">
+                <video autoplay loop muted class="proj-video">
+                    <source src="vid/Motora-vid.mp4" type="video/mp4">
+                </video>
+                <p>Motora, a template project from scratch, built to showcase the working of a 
+                    vehicle service management system, developed using Django.
+                </p>
+            </div>
+        </div>
+        </section>
+
+        <!--for contacts-->
+        <section class="contacts" id="contacts">
+            <h2>Contact Me</h2>
+            <h3>Let's get in touch for some awesome work!</h3>
+            <div class="contact-list">
+                <li><a title="+91 9230503306">+91 9230503306</a></li>
+                <li><a href="mailto: saptarshibose2002@gmail.com">saptarshibose2002@gmail.com</a></li>
+            </div>
+
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/saptarshi-bose-46427923a/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/saptarshi20022" target="_blank"><i class='bx bxl-github' ></i></a>
+                <a title="+91 9230503306"><i class='bx bxl-whatsapp' ></i></a>
             </div>
         </section>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="script.js"></script>
     </body>
 </html>

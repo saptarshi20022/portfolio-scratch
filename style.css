@@ -1,0 +1,472 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+:root{
+    --bg-color: #020312;
+    --text-color: #fff;
+    --main-color: #eb4a4a;
+    --second-color: gray;
+    --other-color: #12141c;
+    --h1-font: 5.2rem;
+    --h2-font: 3.5rem;
+    --p-font: 1.3rem;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar{
+    display: flex;
+    list-style-type: none;
+}
+.navbar a{
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: bold;
+    padding: 10px 25px;
+    margin: 0 2px;
+    border-radius: 0.5rem;
+    transition: all .40s ease;
+    text-decoration: none;
+}
+.navbar a:hover{
+    background: var(--main-color);
+    color: var(--text-color);
+}
+
+section{
+    padding: 70px 10% 90px;
+}
+
+header{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 75%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 22px 16%;
+    border-bottom: 1px solid transparent;
+    transition: all 1s ease;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 5%;
+        width: 100%;
+    }
+}
+
+header.sticky{
+    padding: 10px 16%;
+    background: var(--bg-color);
+    border-bottom: 1px solid #0e1630;
+}
+
+.home{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.home-text{
+    margin-left: 1%;
+}
+.home-text h1{
+    margin: 15px 0;
+    font-size: var(--h1-font);
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.home-text h4{
+    color: cyan;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.home-text h3{
+    color: cyan;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/10){
+    .back-video{
+        width: 110%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/10){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+/* About Me */
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+
+}
+
+
+@media (max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr; /* Stack items vertically */
+    }
+}
+
+.about-text h2{
+    font-size: var(--h2-font);
+}
+
+.about-text h4{
+    color: cyan;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.about-text p{
+    color: var(--second-color);
+    font-size: var(--p-font);
+    margin-bottom: 20px;
+}
+
+.about-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,auto));
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.about-list h5{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.btn{
+    color: var(--text-color);
+    font-size: var(--p-font);
+    background-color: var(--main-color);
+    border-radius: 0.5rem;
+    font-weight: bold;
+    padding: 10px 25px;
+    margin: 0 2px;
+    border-radius: 0.5rem;
+    transition: all .40s ease;
+    text-decoration: none;
+}
+
+.btn:hover{
+    transform: scale(1.01) translateY(-5px);
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+}
+
+/*Skills section*/
+
+.inner{
+    
+    padding: 20px;
+    text-align: center;
+}
+
+.skills{    
+   
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#skills{
+    padding-top: 100px;
+}
+
+.Tcontainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .Tcontainer {
+        grid-template-columns: 1fr 1fr; /* Two columns for mobile */
+        padding: 1rem;
+    }
+}
+
+.Tcontainer div > h2{
+    display: inline-block;
+    background-color: cyan;
+    color: #020312;
+    border-radius: 5px;
+    background-size: 70px;;
+    padding: 10px 25px;
+    margin: 0 2px;
+    border-radius: 0.5rem;
+    transition: all 0.4s ease;
+}
+
+.Tcontainer div > h2:hover{
+    transform: translateY(-5px);
+    color: cyan;
+    background-color: transparent;
+    outline: 0.5px solid cyan;
+}
+
+/*Experience*/
+.experience {
+    align-items: flex-start;
+    text-align: left;
+    padding: 50px 16%; 
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.experience-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.experience h1 {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+.comp-det {
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 1rem;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;  
+}
+
+.comp-img {
+    width: 60px;          
+    height: 60px;         
+    border-radius: 50%;    /*Makes the image circular*/
+    object-fit: cover;     /*Ensures the image maintains aspect ratio*/
+    margin-right: 20px;    /*Space between the image and text*/
+}
+
+
+.comp-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+
+.comp-position {
+    font-size: 1.2rem;
+    color: #eb4a4a;            
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+
+.comp-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+
+.comp-date {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #aaa;
+    text-align: right;
+}
+
+/*Projects*/
+
+.projects {
+    padding: 50px 5%;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    background-color: #020312; /* Optional: Add a background color */
+    margin-bottom: 200px;
+}
+
+.proj-text h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.proj-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 2rem; /* Space between the columns */
+    align-items: start;
+    max-width: 1200px; /* Limit width for better layout */
+    margin: 0 auto; /* Center the container */
+}
+
+@media (max-width: 768px) {
+    .proj-container {
+        grid-template-columns: 1fr; /* Stack projects vertically on mobile */
+    }
+}
+
+.proj-item {
+    background-color: #12141c; /* Optional: Background for each item */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+    text-align: center;
+}
+
+
+.proj-video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+.proj-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ccc;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .proj-container {
+        grid-template-columns: 1fr; /* Stack videos vertically */
+    }
+
+    .proj-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .proj-item {
+        padding: 15px;
+    }
+}
+
+/*Contact*/
+
+/* Contacts Section Styling */
+.contacts {
+    padding: 50px 16%;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    margin-top: 300px;
+}
+
+@media (max-width: 768px) {
+    .contacts {
+        padding: 20px 5%;
+    }
+
+    .contacts h2 {
+        font-size: 2.5rem; /* Adjust heading font size */
+    }
+
+    .contacts h3 {
+        font-size: 1.2rem; /* Adjust subheading font size */
+    }
+}
+
+/* Heading Styles */
+.contacts h2 {
+    font-size: var(--h2-font);
+    margin-bottom: 0.5rem;
+}
+
+.contacts h3 {
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Contact List Styling */
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+.contact-list li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-list a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.contact-list a:hover{
+    color: var(--main-color);
+}
+
+/* Contact Icons Styling */
+.contact-icons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.contact-icons a {
+    font-size: 2rem;
+    color: cyan;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: var(--main-color);
+    transform: scale(1.2);
+}
