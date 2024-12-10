@@ -5,7 +5,6 @@
     scroll-behavior: smooth;
 }
 
-
 :root{
     --bg-color: #020312;
     --text-color: #fff;
@@ -20,6 +19,7 @@
 body{
     background: var(--bg-color);
     color: var(--text-color);
+    width: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -29,6 +29,7 @@ body{
     display: flex;
     list-style-type: none;
 }
+
 .navbar a{
     color: var(--text-color);
     font-size: var(--p-font);
@@ -65,8 +66,26 @@ header{
 
 @media (max-width: 768px) {
     header {
-        padding: 10px 5%;
-        width: 100%;
+        width: 80%;    
+        margin: 0 auto;   
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-around; /* Evenly space the anchors */
+        padding: 0; /* Remove any padding */
+        margin: 0; /* Remove any margin */
+    }
+
+    .navbar li {
+        list-style-type: none;
+        margin: 0 10px; /* Space between the list items */
+    }
+
+    .navbar a{
+        padding: 1px;
+        font-size: 13px;
+        text-align: center;
+        display: block;
     }
 }
 
@@ -84,6 +103,7 @@ header.sticky{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    overflow: hidden;
 }
 .home-text{
     margin-left: 1%;
@@ -113,21 +133,35 @@ header.sticky{
     position: absolute;
     right: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: -1; 
+    object-fit: cover;
 }
 
-@media (min-aspect-ratio: 16/10){
+/* @media (max-width: 768px){
     .back-video{
         width: 110%;
         height: auto;
     }
-}
-@media (max-aspect-ratio: 16/10){
-    .back-video{
-        width: auto;
-        height: 100%;
+} */
+@media (max-width: 768px){
+    .back-video {
+        width: 150%;       /* Make the video fill the width of the section */
+        height: 180%;      /* Make the video fill the height of the section */
+        object-fit: cover; /* Ensure the video covers the entire section */
+        position: absolute; /* Position the video absolutely within the section */
+        top: 0;
+        left: 0;
+        z-index: -1; /* Ensure the video is behind the text */
     }
+
+    .home {
+        position: relative; /* Make sure the section has a relative position to place the video behind the text */
+        overflow: hidden; /* Hide any overflowing content */
+    }
+    
 }
+
+
 
 /* About Me */
 
@@ -211,7 +245,7 @@ header.sticky{
 }
 
 #skills{
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 .Tcontainer{
@@ -226,10 +260,17 @@ header.sticky{
 }
 
 @media (max-width: 768px) {
-    .Tcontainer {
-        grid-template-columns: 1fr 1fr; /* Two columns for mobile */
-        padding: 1rem;
+    
+    .skills{
+        width: 120%;   
     }
+    .Tcontainer {
+        grid-template-columns: 1fr 1fr; 
+        font-size: 1rem;
+        padding: 1rem;
+        margin-left: 90px;
+    }
+
 }
 
 .Tcontainer div > h2{
@@ -258,6 +299,10 @@ header.sticky{
     padding: 50px 16%; 
     color: white;
     font-family: 'Quicksand', sans-serif;
+}
+
+#experience{
+    padding-top: 100px;
 }
 
 .experience-container{
@@ -322,6 +367,12 @@ header.sticky{
     text-align: right;
 }
 
+@media(max-width:768px){
+    .comp-det{
+        width: 120%;
+    }
+}
+
 /*Projects*/
 
 .projects {
@@ -330,7 +381,10 @@ header.sticky{
     font-family: 'Quicksand', sans-serif;
     text-align: center;
     background-color: #020312; /* Optional: Add a background color */
-    margin-bottom: 200px;
+}
+
+#projects{
+    padding-top: 100px;
 }
 
 .proj-text h2 {
@@ -349,9 +403,14 @@ header.sticky{
 }
 
 @media (max-width: 768px) {
+    .proj-text{
+        width: 120%;
+    }
     .proj-container {
         grid-template-columns: 1fr; /* Stack projects vertically on mobile */
+        width: 120%;
     }
+
 }
 
 .proj-item {
@@ -400,12 +459,23 @@ header.sticky{
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     color: white;
-    margin-top: 300px;
+    margin-bottom: 200px;
+}
+
+#contacts{
+    padding-top: 200px;
 }
 
 @media (max-width: 768px) {
+
     .contacts {
         padding: 20px 5%;
+        margin-top: 150px;
+        width: 110%;
+    }
+
+    .contact-icons{
+        margin-bottom: 100px;
     }
 
     .contacts h2 {
